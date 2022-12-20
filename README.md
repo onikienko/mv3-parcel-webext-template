@@ -1,0 +1,1 @@
+# mv3-parcel-webext-template
