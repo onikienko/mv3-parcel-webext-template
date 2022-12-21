@@ -1,8 +1,7 @@
-import filenamify from 'filenamify';
-import fs from 'fs-extra';
-import path from 'node:path';
-import zl from 'zip-lib';
-
+const fs = require('fs-extra');
+const path = require('node:path');
+const extName = require('./getExtName');
+const zl = require('zip-lib');
 
 const DIST_DIR = './dist';
 const RELEASE_DIR = './releases';
@@ -10,9 +9,6 @@ const RELEASE_DIR = './releases';
 if (!fs.pathExistsSync(DIST_DIR)) throw new Error('Dist dir does not exist');
 
 const {version} = fs.readJsonSync('./src/manifest.json');
-const {name} = fs.readJsonSync('./package.json');
-
-const extName = filenamify(name, {replacement: '_'});
 const zipName = `${extName}-v${version}.zip`;
 
 const zipPath = path.join(RELEASE_DIR, zipName);
