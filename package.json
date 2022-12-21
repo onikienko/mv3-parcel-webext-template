@@ -1,20 +1,20 @@
 {
   "name": "mv3-parcel-webext-template",
   "version": "1.0.0",
-  "description": "",
+  "description": "Chrome Extension boilerplate for manifest v3. With React.",
   "scripts": {
     "start": "parcel watch src/manifest.json src/popup/index.html --host localhost",
     "prebuild": "rimraf dist",
     "build": "parcel build src/manifest.json src/popup/index.html --no-source-maps",
     "postbuild": "node utils/create-zip.js",
-    "release": "release-it"
+    "release": "dotenv release-it --"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/onikienko/mv3-parcel-webext-template.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Mykhailo Onikiienko <michael.onikienko@gmail.com> (https://github.com/onikienko)",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/onikienko/mv3-parcel-webext-template/issues"
   },
@@ -26,6 +26,7 @@
     "@types/react-dom": "^18.0.9",
     "@types/rimraf": "^3.0.2",
     "dot-json": "^1.2.2",
+    "dotenv-cli": "^6.0.0",
     "eslint": "^8.30.0",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
