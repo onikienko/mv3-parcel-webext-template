@@ -6,7 +6,8 @@
     "start": "parcel watch src/manifest.json src/popup/index.html --host localhost",
     "prebuild": "rimraf dist",
     "build": "parcel build src/manifest.json src/popup/index.html --no-source-maps",
-    "postbuild": "node src/utils/create-zip.mjs"
+    "postbuild": "node src/utils/create-zip.mjs",
+    "release": "release-it"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "filenamify": "^5.1.1",
     "fs-extra": "^11.1.0",
     "process": "^0.11.10",
+    "release-it": "^15.5.1",
     "rimraf": "^3.0.2",
     "zip-lib": "^0.7.3"
   },
