@@ -1,6 +1,3 @@
-const {extName} = require('./utils/getExtName.js');
-
-
 module.exports = {
     'git': {
         'requireCleanWorkingDir': true,
@@ -13,7 +10,7 @@ module.exports = {
         'release': true,
         'releaseName': 'v${version}',
         'tokenRef': 'GITHUB_TOKEN',
-        'assets': `releases/${extName}` + '-v${version}.zip',
+        'assets': ['releases/*-v${version}.zip'],
     },
     'npm': {
         'publish': false,
