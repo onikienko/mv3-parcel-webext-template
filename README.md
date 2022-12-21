@@ -1,6 +1,8 @@
 # mv3-parcel-webext-template
 
 Chrome Extension boilerplate for manifest v3.
+<img align="right" src="src/images/icon128.png?raw=true">
+
 Uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
 and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
