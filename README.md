@@ -8,9 +8,11 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
 ## Note
 
-- After project initialization change `name` field in the `package.json` file. This field will be used as name for `.zip`
-with release.
-- Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same value. So no need to update version inside `manifes.json` manually.
+- After project initialization change `name` field in the `package.json` file. This field will be used as name
+  for `.zip`
+  with release.
+- Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
+  value. So no need to update version inside `manifes.json` manually.
 - Release file name uses `name` field from the `package.json`. Not from `manifest.json`.
 
 ## Development:
@@ -22,7 +24,7 @@ with release.
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
     3. Click on `Load unpacked extension`
-    4. Select the `build` folder.
+    4. Select the `dist` folder.
 
 ## Production build:
 
@@ -33,26 +35,22 @@ with release.
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
     3. Click on `Load unpacked extension`
-    4. Select the `build` folder
+    4. Select the `dist` folder
 
-Also, `zip` file with production build will be created in the `releases` folder.
+Also, `zip` file with production extension's code will be created in `releases` folder.
+This code is ready for uploading to Chrome Web Store.
 
 ## Release:
 
-We are using [release-it](https://github.com/release-it/release-it)
+We are using [release-it](https://github.com/release-it/release-it) for release flow.
 
-1. Generate `personal access token` in github following the steps:
-    1. Go to Github->Settings->DeveloperSettings->PersonalAccessTokens
-        - [link](https://github.com/settings/tokens/new?scopes=repo&description=release-it)
-    2. For title, enter note as `release-it`
-    3. For scopes, select only `repo`
-    4. Click `Generate token`
-
-2. Create `.env` file inside git repo and copy paste the generated `personal access token` in `GITHUB_TOKEN` variable
+1. Generate `personal access token` in GitHub. Go to
+   [Github->Settings->DeveloperSettings->PersonalAccessTokens](https://github.com/settings/tokens/new?scopes=repo&description=release-it).
+   Only `repo` scope is required.
+2. Rename already existing `.env.example` file to `.env` and put generated `personal access token` there. It will look
+   like:
     ```
     GITHUB_TOKEN="f941e0..."
     ```
-   Or rename already existing `.env.example` file to `.env` and put token there.
-
 3. Run `npm run release`. Under the hood it will run `npm run build` steps, make version bump (in both `package.json`
-   and `manifest.json`), commit, push and make GitHub release with `zip` file attached.
+   and `manifest.json`), commit, push and make GitHub release with generated `zip` file attached.
