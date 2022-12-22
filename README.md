@@ -6,8 +6,8 @@ Chrome Extension boilerplate for manifest v3.
 Uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
 and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
-After project initialization change `name` field in the `package.json` file. This field will be used as name for `.zip`
-with release.
+**After project initialization change `name` field in the `package.json` file. This field will be used as name for `.zip`
+with release.**
 
 ## Development:
 
