@@ -6,8 +6,12 @@ Chrome Extension boilerplate for manifest v3.
 Uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
 and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
-**After project initialization change `name` field in the `package.json` file. This field will be used as name for `.zip`
-with release.**
+## Note
+
+- After project initialization change `name` field in the `package.json` file. This field will be used as name for `.zip`
+with release.
+- Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same value. So no need to update version inside `manifes.json` manually.
+- Release file name uses `name` field from the `package.json`. Not from `manifest.json`.
 
 ## Development:
 
@@ -52,8 +56,3 @@ We are using [release-it](https://github.com/release-it/release-it)
 
 3. Run `npm run release`. Under the hood it will run `npm run build` steps, make version bump (in both `package.json`
    and `manifest.json`), commit, push and make GitHub release with `zip` file attached.
-
-## Note
-
-- Version number is used as per `package.json`. `Manifest.json` will be updated during release with the same value.
-- Release file name uses `name` field from the `package.json`. Not from `manifest.json`.
