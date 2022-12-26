@@ -11,7 +11,7 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 - After project initialization change `name` field in the `package.json` file. This field will be used as name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
 - Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
-  value. So no need to update version inside `manifes.json` manually.
+  value. So no need to update version inside `manifes.json` manually if you will use `release` script.
 
 ## Development:
 
