@@ -1,7 +1,8 @@
-const filenamify = require('filenamify');
-const fs = require('fs-extra');
-const path = require('node:path');
-const zl = require('zip-lib');
+import filenamify from 'filenamify';
+import fs from 'fs-extra';
+import path from 'node:path';
+import zl from 'zip-lib';
+
 
 const DIST_DIR = './dist';
 const RELEASE_DIR = './releases';
