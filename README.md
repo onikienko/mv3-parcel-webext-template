@@ -52,3 +52,16 @@ We are using [release-it](https://github.com/release-it/release-it) for release 
     ```
 3. Run `npm run release`. Under the hood it will run `npm run build` steps, make version bump (in both `package.json`
    and `manifest.json`), commit, push and make GitHub release with generated `zip` file attached.
+
+## Recipes
+
+If you need to have some page which is not listed in `manifest.json`, you may add it as additional entry point.
+Something like that:
+
+```
+"start": "parcel watch src/manifest.json src/panel/panel.html --host localhost",
+"build": "parcel build src/manifest.json src/panel/panel.html  --no-cache"
+```
+
+In that case `panel` folder will be created in `dist`
+and you may reference it from your code like `panel/panel.html`.
