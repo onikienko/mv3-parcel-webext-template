@@ -48,7 +48,7 @@ Template uses [release-it](https://github.com/release-it/release-it) for release
 2. Rename already existing `.env.example` file to `.env` and put generated `personal access token` there. It will look
    like:
     ```
-    GITHUB_TOKEN="f941e0..."
+    GITHUB_TOKEN="your generated token"
     ```
 3. Run `npm run release`. Under the hood it will run `npm run build` steps, make version bump (in both `package.json`
    and `manifest.json`), commit, push and make GitHub release with generated `zip` file attached.
