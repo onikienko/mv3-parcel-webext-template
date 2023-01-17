@@ -29,7 +29,7 @@
     "dot-json": "^1.2.2",
     "dotenv-cli": "^6.0.0",
     "eslint": "^8.31.0",
-    "eslint-plugin-react": "^7.31.11",
+    "eslint-plugin-react": "^7.32.1",
     "eslint-plugin-react-hooks": "^4.6.0",
     "filenamify": "^5.1.1",
     "fs-extra": "^11.1.0",
