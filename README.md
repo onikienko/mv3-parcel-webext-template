@@ -12,6 +12,8 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
   for `.zip` with release. Not the `name` field from the `manifest.json`.
 - Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
   value. So no need to update version inside `manifes.json` manually if you will use `release` script.
+- there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates). 
+If you do not want to have PRs with your dependencies version updates, remove `github/dependabot.yml` file.
 
 ## Development:
 
