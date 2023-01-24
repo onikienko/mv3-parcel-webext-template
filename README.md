@@ -42,7 +42,7 @@ This code is ready for uploading to Chrome Web Store.
 
 ## Release:
 
-Template uses [release-it](https://github.com/release-it/release-it) for release flow.
+Template uses [release-it](https://github.com/release-it/release-it) for release on GitHub.
 
 1. Generate `personal access token` in GitHub. Go to
    [Github->Settings->DeveloperSettings->PersonalAccessTokens](https://github.com/settings/tokens/new?scopes=repo&description=release-it).
