@@ -60,7 +60,7 @@ Template uses [release-it](https://github.com/release-it/release-it) for release
 If you need to have some page which is not listed in `manifest.json`, you may add it as additional entry point.
 Something like that:
 
-```
+```json
 "start": "parcel watch src/manifest.json src/panel/panel.html --host localhost",
 "build": "parcel build src/manifest.json src/panel/panel.html  --no-cache"
 ```
