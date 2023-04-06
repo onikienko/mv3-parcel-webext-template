@@ -23,7 +23,7 @@
     "@parcel/config-webextension": "^2.8.3",
     "@types/chrome": "^0.0.226",
     "@types/fs-extra": "^11.0.1",
-    "@types/react": "^18.0.30",
+    "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
     "@types/rimraf": "^4.0.5",
     "dot-json": "^1.2.2",
