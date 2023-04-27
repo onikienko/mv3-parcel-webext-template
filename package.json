@@ -25,7 +25,6 @@
     "@types/fs-extra": "^11.0.1",
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
-    "@types/rimraf": "^4.0.5",
     "dot-json": "^1.2.2",
     "dotenv-cli": "^7.2.1",
     "eslint": "^8.39.0",
