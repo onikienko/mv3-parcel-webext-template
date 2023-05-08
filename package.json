@@ -27,7 +27,7 @@
     "@types/react-dom": "^18.2.1",
     "dot-json": "^1.2.2",
     "dotenv-cli": "^7.2.1",
-    "eslint": "^8.39.0",
+    "eslint": "^8.40.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "filenamify": "^5.1.1",
