@@ -1,3 +1,6 @@
+Russian invaders must die. Glory to Ukraine. Тримаймося, браття. 🇺🇦
+------
+
 # mv3-parcel-webext-template
 
 Chrome Extension boilerplate for manifest v3.
