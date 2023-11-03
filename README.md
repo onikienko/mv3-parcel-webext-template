@@ -14,7 +14,7 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 - After project initialization change `name` field in the `package.json` file. This field will be used as name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
 - Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
-  value. So no need to update version inside `manifes.json` manually if you will use `release` script.
+  value. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
 - there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates). 
 If you do not want to have PRs with your dependencies version updates, remove `.github/dependabot.yml` file.
 
@@ -41,22 +41,22 @@ If you do not want to have PRs with your dependencies version updates, remove `.
     4. Select the `dist` folder
 
 Also, `zip` file with production extension's code will be created in `releases` folder.
-This code is ready for uploading to Chrome Web Store.
+This code is ready for uploading to the Chrome Web Store.
 
 ## Release:
 
-Template uses [release-it](https://github.com/release-it/release-it) for release on GitHub.
+The template uses [release-it](https://github.com/release-it/release-it) for release on GitHub.
 
 1. Generate `personal access token` in GitHub. Go to
    [Github->Settings->DeveloperSettings->PersonalAccessTokens](https://github.com/settings/tokens/new?scopes=repo&description=release-it).
    Only `repo` scope is required.
-2. Rename already existing `.env.example` file to `.env` and put generated `personal access token` there. It will look
+2. Rename the already existing `.env.example` file to `.env` and put the generated `personal access token` there. It will look
    like:
     ```
     GITHUB_TOKEN="your generated token"
     ```
-3. Run `npm run release`. Under the hood it will run `npm run build` steps, make version bump (in both `package.json`
-   and `manifest.json`), commit, push and make GitHub release with generated `zip` file attached.
+3. Run `npm run release`. Under the hood, it will run `npm run build` steps, and make version bump (in both `package.json`
+   and `manifest.json`), commit, push, and make a GitHub release with the generated `zip` file attached.
 
 ## Known issues
 
@@ -65,7 +65,7 @@ For description and workarounds take a look at [this issue](https://github.com/p
 
 ## Recipes
 
-If you need to have some page which is not listed in `manifest.json`, you may add it as additional entry point.
+If you need to have some page that is not listed in `manifest.json`, you may add it as an additional entry point.
 Something like that:
 
 ```json
