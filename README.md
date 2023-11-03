@@ -58,6 +58,11 @@ Template uses [release-it](https://github.com/release-it/release-it) for release
 3. Run `npm run release`. Under the hood it will run `npm run build` steps, make version bump (in both `package.json`
    and `manifest.json`), commit, push and make GitHub release with generated `zip` file attached.
 
+## Known issues
+
+Parcel Web Extension Config does not support `scripting` API (`executeScript`, `insertCSS`, etc). 
+For description and workarounds take a look at [this issue](https://github.com/parcel-bundler/parcel/issues/5758).
+
 ## Recipes
 
 If you need to have some page which is not listed in `manifest.json`, you may add it as additional entry point.
