@@ -61,7 +61,7 @@ The template uses [release-it](https://github.com/release-it/release-it) for rel
 ## Known issues
 
 Parcel Web Extension Config does not support `scripting` API (`executeScript`, `insertCSS`, etc). 
-For description and workarounds take a look at [this issue](https://github.com/parcel-bundler/parcel/issues/5758).
+For description and workarounds take a look at [this issue](https://github.com/parcel-bundler/parcel/issues/8685).
 
 ## Recipes
 
