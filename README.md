@@ -20,7 +20,7 @@ If you do not want to have PRs with your dependencies version updates, remove `.
 
 ## Development:
 
-1. Check if your [Node.js](https://nodejs.org/) version is >= **16**.
+1. Check if your [Node.js](https://nodejs.org/) version is >= **18**.
 2. Run `npm install` to install the dependencies.
 3. Run `npm start`
 4. Load your extension on Chrome following:
