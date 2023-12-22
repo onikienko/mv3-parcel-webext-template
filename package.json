@@ -2,6 +2,9 @@
   "name": "mv3-parcel-webext-template",
   "version": "0.0.0",
   "description": "Chrome Extension boilerplate for manifest v3. With React.",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "parcel watch src/manifest.json --host localhost",
     "prebuild": "rimraf dist",
