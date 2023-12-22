@@ -33,7 +33,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "filenamify": "^5.1.1",
+    "filenamify": "^6.0.0",
     "fs-extra": "^11.2.0",
     "glob": "^10.3.10",
     "opener": "^1.5.2",
