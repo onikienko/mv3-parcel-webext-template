@@ -39,7 +39,7 @@
     "release-it": "^17.1.1",
     "rimraf": "^5.0.5",
     "sharp": "^0.31.3",
-    "zip-lib": "^0.7.3"
+    "zip-lib": "^1.0.0"
   },
   "dependencies": {
     "react": "^18.2.0",
