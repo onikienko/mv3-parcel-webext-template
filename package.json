@@ -21,6 +21,7 @@
   "homepage": "https://github.com/onikienko/mv3-parcel-webext-template#readme",
   "devDependencies": {
     "@parcel/config-webextension": "^2.11.0",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@types/chrome": "^0.0.260",
     "@types/fs-extra": "^11.0.4",
     "@types/react": "^18.2.56",

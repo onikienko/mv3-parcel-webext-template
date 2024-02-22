@@ -12,11 +12,30 @@ module.exports = {
         'tokenRef': 'GITHUB_TOKEN',
         'assets': ['releases/*-v${version}.zip'],
     },
+    'plugins': {
+        '@release-it/conventional-changelog': {
+            'infile': 'CHANGELOG.md',
+            'ignoreRecommendedBump': true,
+            'preset': {
+                'name': 'conventionalcommits',
+                'types': [
+                    {
+                        'type': 'feat',
+                        'section': 'Features',
+                    },
+                    {
+                        'type': 'fix',
+                        'section': 'Bug Fixes',
+                    },
+                ],
+            },
+        },
+    },
     'npm': {
         'publish': false,
     },
     'hooks': {
-        // bump version in the manifest.json to be the same as in the package.json
+        // bump a version in the manifest.json to be the same as in the package.json
         'before:bump': ['dot-json src/manifest.json version "${version}"'],
         'after:bump': ['npm run build'],
         'after:release': [
