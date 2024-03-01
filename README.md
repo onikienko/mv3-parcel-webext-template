@@ -61,7 +61,7 @@ The template uses [release-it](https://github.com/release-it/release-it) for rel
 ## Known issues
 
 Parcel Web Extension Config does not support `scripting` API (`executeScript`, `insertCSS`, etc). 
-For description and workarounds take a look at [this issue](https://github.com/parcel-bundler/parcel/issues/8685).
+For description and workarounds take a look at [this issue](https://github.com/parcel-bundler/parcel/issues/8685) and [this one](https://github.com/parcel-bundler/parcel/issues/5758). Or take a look at the recipe below. 
 
 ## Recipes
 
@@ -75,3 +75,36 @@ Something like that:
 
 In that case `panel` folder will be created in `dist`
 and you may reference it from your code like `panel/panel.html`.
+
+You can use the same approach if you need to inject scripts dynamically using `chrome.scripting` API.
+For such code
+```javaScript
+chrome.scripting
+    .executeScript({
+      target : {tabId},
+      files : [ "checker/index.js" ],
+    })
+```
+you could update your scripts in `manifest.json` like this:
+```json
+"start": "parcel watch src/manifest.json src/checker/index.js --host localhost",
+"build": "parcel build src/manifest.json src/checker/index.js  --no-cache"
+```
+If you will need to use assets in such dynamically injected script you will need to put them in `web_accessible_resources` in your `manifest.json`:
+```json
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "web-accessible/icon.png"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
+```
+And in your code, you will need to use them like 
+```javaScript
+<image src={chrome.runtime.getURL('web-accessible/icon.png')}/>
+```
+Do not use `import icon from "./web-accessible/icon.png"` in such scripts.
