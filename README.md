@@ -1,4 +1,4 @@
-Russian invaders must die. Glory to Ukraine. Тримаймося, браття. 🇺🇦
+Glory to Ukraine
 ------
 
 # mv3-parcel-webext-template
@@ -11,7 +11,7 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
 ## Note
 
-- After project initialization change `name` field in the `package.json` file. This field will be used as name
+- After project initialization, change the `name` field in the `package.json` file. This field will be used as a name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
 - Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
   value. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
@@ -31,7 +31,7 @@ If you do not want to have PRs with your dependencies version updates, remove `.
 
 ## Production build:
 
-1. Stop development script (if it is running)
+1. Stop the development script (if it is running)
 2. Remove installed dev. extension at `chrome://extensions/`
 3. Run `npm run build`
 4. Load your extension on Chrome following:
@@ -55,17 +55,17 @@ The template uses [release-it](https://github.com/release-it/release-it) for rel
     ```
     GITHUB_TOKEN="your generated token"
     ```
-3. Run `npm run release`. Under the hood, it will run `npm run build` steps, and make version bump (in both `package.json`
+3. Run `npm run release`. Under the hood, it will run `npm run build` steps, and make a version bump (in both `package.json`
    and `manifest.json`), commit, push, and make a GitHub release with the generated `zip` file attached.
 
 ## Known issues
 
-Parcel Web Extension Config does not support `scripting` API (`executeScript`, `insertCSS`, etc). 
-For description and workarounds take a look at [this issue](https://github.com/parcel-bundler/parcel/issues/8685) and [this one](https://github.com/parcel-bundler/parcel/issues/5758). Or take a look at the recipe below. 
+Parcel Web Extension Config [does not support](https://github.com/parcel-bundler/parcel/issues/5758) `scripting` API (`executeScript`, `insertCSS`, etc). 
+For a workaround take a look at the recipe below.
 
 ## Recipes
 
-If you need to have some page that is not listed in `manifest.json`, you may add it as an additional entry point.
+If you need to have a page not listed in `manifest.json`, you may add it as an additional entry point.
 Something like that:
 
 ```json
@@ -73,8 +73,7 @@ Something like that:
 "build": "parcel build src/manifest.json src/panel/panel.html  --no-cache"
 ```
 
-In that case `panel` folder will be created in `dist`
-and you may reference it from your code like `panel/panel.html`.
+In that case `panel` folder will be created in `dist` and you can reference it from your code like `panel/panel.html`.
 
 You can use the same approach if you need to inject scripts dynamically using `chrome.scripting` API.
 For such code
