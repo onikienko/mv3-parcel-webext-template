@@ -1,12 +1,9 @@
-Glory to Ukraine
-------
-
 # mv3-parcel-webext-template
 
 Chrome Extension boilerplate for manifest v3.
 <img align="right" width="128" src="src/images/icon256.png">
 
-Uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
+Template uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
 and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
 ## Note
@@ -15,8 +12,8 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
   for `.zip` with release. Not the `name` field from the `manifest.json`.
 - Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
   value. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
-- there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates). 
-If you do not want to have PRs with your dependencies version updates, remove `.github/dependabot.yml` file.
+- there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).
+  If you do not want to have PRs with your dependency version updates, remove `.github/dependabot.yml` file.
 
 ## Development:
 
@@ -60,37 +57,37 @@ The template uses [release-it](https://github.com/release-it/release-it) for rel
 
 ## Known issues
 
-Parcel Web Extension Config [does not support](https://github.com/parcel-bundler/parcel/issues/5758) `scripting` API (`executeScript`, `insertCSS`, etc). 
-For a workaround take a look at the recipe below.
+Parcel Web Extension Config [does not support](https://github.com/parcel-bundler/parcel/issues/5758) `scripting` API (`executeScript`, `insertCSS`, etc).
+For a workaround, take a look at the recipe below.
 
 ## Recipes
 
-If you need to have a page not listed in `manifest.json`, you may add it as an additional entry point.
-Something like that:
+### Usage with `chrome.scripting` API
 
-```json
-"start": "parcel watch src/manifest.json src/panel/panel.html --host localhost",
-"build": "parcel build src/manifest.json src/panel/panel.html  --no-cache"
-```
+If you need to inject scripts dynamically using `chrome.scripting` API, you could add these scripts to `manifest.json`
+as additional entry point.
 
-In that case `panel` folder will be created in `dist` and you can reference it from your code like `panel/panel.html`.
-
-You can use the same approach if you need to inject scripts dynamically using `chrome.scripting` API.
 For such code
+
 ```javaScript
 chrome.scripting
     .executeScript({
-      target : {tabId},
-      files : [ "checker/index.js" ],
+        target: {tabId},
+        files: ["checker/index.js"],
     })
 ```
+
 you could update your scripts in `manifest.json` like this:
-```json
+
+```
 "start": "parcel watch src/manifest.json src/checker/index.js --host localhost",
 "build": "parcel build src/manifest.json src/checker/index.js  --no-cache"
 ```
-If you will need to use assets in such dynamically injected script you will need to put them in `web_accessible_resources` in your `manifest.json`:
-```json
+
+If you need to use assets in such a dynamically injected script,
+you need to put them in `web_accessible_resources` in your `manifest.json`:
+
+```
   "web_accessible_resources": [
     {
       "resources": [
@@ -102,8 +99,25 @@ If you will need to use assets in such dynamically injected script you will need
     }
   ]
 ```
-And in your code, you will need to use them like 
+
+And in your code, you will need to use them like
+
 ```javaScript
 <image src={chrome.runtime.getURL('web-accessible/icon.png')}/>
 ```
+
 Do not use `import icon from "./web-accessible/icon.png"` in such scripts.
+
+### If you need to have a page not listed in `manifest.json`
+
+The same, if you need to have a page not listed in `manifest.json`.
+You can add it as an additional entry point.
+
+Something like that:
+
+```
+"start": "parcel watch src/manifest.json src/panel/panel.html --host localhost",
+"build": "parcel build src/manifest.json src/panel/panel.html  --no-cache"
+```
+
+In that case `panel` folder will be created in `dist` and you can reference it from your code like `panel/panel.html`.
