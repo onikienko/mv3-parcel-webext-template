@@ -121,3 +121,14 @@ Something like that:
 ```
 
 In that case `panel` folder will be created in `dist` and you can reference it from your code like `panel/panel.html`.
+
+### How to get rid of React
+
+If you do not need to use React in your extension:
+
+```shell
+npm uninstall react react-dom @types/react @types/react-dom eslint-plugin-react eslint-plugin-react-hooks
+```
+
+React is used only in `popup`,
+so just remove `src/popup/App.js` and update `src/popup/index.js` according to your needs.
