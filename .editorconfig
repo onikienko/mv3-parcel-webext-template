@@ -260,7 +260,6 @@ ij_html_text_wrap = normal
 [{*.http,*.rest}]
 indent_size = 0
 ij_continuation_indent_size = 4
-ij_http request_call_parameters_wrap = normal
 
 [{*.markdown,*.md}]
 ij_markdown_force_one_space_after_blockquote_symbol = true
