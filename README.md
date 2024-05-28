@@ -3,21 +3,21 @@
 Chrome Extension boilerplate for manifest v3.
 <img align="right" width="128" src="src/images/icon256.png">
 
-Template uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
+This template uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
 and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
 ## Note
 
 - After project initialization, change the `name` field in the `package.json` file. This field will be used as a name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
-- Version number for release is used as per `package.json`. `Manifest.json` will be updated during release with the same
-  value. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
+- Version number for release is used as per `package.json`. `Manifest.json` will be updated with the same
+value during release. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
 - there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).
-  If you do not want to have PRs with your dependency version updates, remove `.github/dependabot.yml` file.
+  If you do not want PRs with your dependency version updates, remove the `.github/dependabot.yml` file.
 
 ## Development:
 
-1. Check if your [Node.js](https://nodejs.org/) version is >= **18**.
+1. Check if your [Node.js](https://nodejs.org/) version is >= **18.18**.
 2. Run `npm install` to install the dependencies.
 3. Run `npm start`
 4. Load your extension on Chrome following:
@@ -37,8 +37,8 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
     3. Click on `Load unpacked extension`
     4. Select the `dist` folder
 
-Also, `zip` file with production extension's code will be created in `releases` folder.
-This code is ready for uploading to the Chrome Web Store.
+Also, `zip` file with the production extension's code will be created in the `releases` folder.
+This code is ready to be published in the Chrome Web Store.
 
 ## Release:
 
@@ -65,7 +65,7 @@ For a workaround, take a look at the recipe below.
 ### Usage with `chrome.scripting` API
 
 If you need to inject scripts dynamically using `chrome.scripting` API, you could add these scripts to `manifest.json`
-as additional entry point.
+as an additional entry point.
 
 For such code
 
@@ -110,7 +110,7 @@ Do not use `import icon from "./web-accessible/icon.png"` in such scripts.
 
 ### If you need to have a page not listed in `manifest.json`
 
-The same, if you need to have a page not listed in `manifest.json`.
+The same goes if you need a page not listed in `manifest.json`.
 You can add it as an additional entry point.
 
 Something like that:
@@ -131,4 +131,4 @@ npm uninstall react react-dom @types/react @types/react-dom eslint-plugin-react 
 ```
 
 React is used only in `popup`,
-so just remove `src/popup/App.js` and update `src/popup/index.js` according to your needs.
+so remove `src/popup/App.js` and update `src/popup/index.js` to meet your needs.
