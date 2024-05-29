@@ -52,12 +52,13 @@ The template uses [release-it](https://github.com/release-it/release-it) for rel
     ```
     GITHUB_TOKEN="your generated token"
     ```
-3. Run `npm run release`. Under the hood, it will run `npm run build` steps, and make a version bump (in both `package.json`
-   and `manifest.json`), commit, push, and make a GitHub release with the generated `zip` file attached.
+3. Run `npm run release`. Under the hood, it will make a version bump (in both `package.json` and `manifest.json`),
+   run `npm run build` steps, commit, push, and make a GitHub release with the generated `zip` file attached.
 
 ## Known issues
 
-Parcel Web Extension Config [does not support](https://github.com/parcel-bundler/parcel/issues/5758) `scripting` API (`executeScript`, `insertCSS`, etc).
+Parcel Web Extension Config [does not support](https://github.com/parcel-bundler/parcel/issues/5758) `scripting` API
+(`executeScript`, `insertCSS`, etc.)
 For a workaround, take a look at the recipe below.
 
 ## Recipes
@@ -111,7 +112,7 @@ Do not use `import icon from "./web-accessible/icon.png"` in such scripts.
 ### If you need to have a page not listed in `manifest.json`
 
 The same goes if you need a page not listed in `manifest.json`.
-You can add it as an additional entry point.
+You can add it as an additional entry point(s).
 
 Something like that:
 
