@@ -133,3 +133,5 @@ npm uninstall react react-dom @types/react @types/react-dom eslint-plugin-react 
 
 React is used only in `popup`,
 so remove `src/popup/App.js` and update `src/popup/index.js` to meet your needs.
+
+In the `.eslintrc.json` file remove all the strings related to `react` (in `extends`, `plugins`, and `rules` props ).
