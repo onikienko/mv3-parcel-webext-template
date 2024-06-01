@@ -6,7 +6,9 @@ Chrome Extension boilerplate for manifest v3.
 This template uses [Parcel Web Extension Config](https://parceljs.org/recipes/web-extension/)
 and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
-## Note
+## How to use
+
+1. Click [<kbd>Use this template</kbd>](https://github.com/onikienko/mv3-parcel-webext-template/generate) button.
 
 - After project initialization, change the `name` field in the `package.json` file. This field will be used as a name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
@@ -15,7 +17,7 @@ value during release. So there is no need to update the version inside `manifes.
 - there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).
   If you do not want PRs with your dependency version updates, remove the `.github/dependabot.yml` file.
 
-## Development:
+### Development:
 
 1. Check if your [Node.js](https://nodejs.org/) version is >= **18.18**.
 2. Run `npm install` to install the dependencies.
@@ -26,7 +28,7 @@ value during release. So there is no need to update the version inside `manifes.
     3. Click on `Load unpacked extension`
     4. Select the `dist` folder.
 
-## Production build:
+### Production build:
 
 1. Stop the development script (if it is running)
 2. Remove installed dev. extension at `chrome://extensions/`
@@ -37,10 +39,10 @@ value during release. So there is no need to update the version inside `manifes.
     3. Click on `Load unpacked extension`
     4. Select the `dist` folder
 
-Also, `zip` file with the production extension's code will be created in the `releases` folder.
+`zip` file with the production extension's code will be created in the `releases` folder.
 This code is ready to be published in the Chrome Web Store.
 
-## Release:
+### Release:
 
 The template uses [release-it](https://github.com/release-it/release-it) for release on GitHub.
 
