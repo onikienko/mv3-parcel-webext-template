@@ -13,6 +13,12 @@ module.exports = {
         'assets': ['releases/*-v${version}.zip'],
     },
     'plugins': {
+        '@release-it/bumper': {
+            // bump a version in the manifest.json
+            'out': {
+                'file': 'src/manifest.json',
+            },
+        },
         '@release-it/conventional-changelog': {
             'infile': 'CHANGELOG.md',
             'ignoreRecommendedBump': true,
@@ -35,8 +41,6 @@ module.exports = {
         'publish': false,
     },
     'hooks': {
-        // bump a version in the manifest.json to be the same as in the package.json
-        'before:bump': ['dot-json src/manifest.json version "${version}"'],
         'after:bump': ['npm run build'],
         'after:release': [
             'echo Successfully released ${name} v${version} to ${repo.repository}',
