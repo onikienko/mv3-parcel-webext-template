@@ -44,7 +44,7 @@ module.exports = {
         'after:bump': ['npm run build'],
         'after:release': [
             'echo Successfully released ${name} v${version} to ${repo.repository}',
-            'opener https://${repo.host}/${repo.repository}/releases/tag/v${version}',
+            'opener ${releaseUrl}',
         ],
     },
 };
