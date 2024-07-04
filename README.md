@@ -12,6 +12,7 @@ Click [<kbd>Use this template</kbd>](https://github.com/onikienko/mv3-parcel-web
 
 - After project initialization, change the `name` field in the `package.json` file. This field will be used as a name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
+  Update `repository`, `author`, `bugs`, `license`, `homepage` props according to your needs.
 - Version number for release is used as per `package.json`. `Manifest.json` will be updated with the same
 value during release. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
 - there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).
