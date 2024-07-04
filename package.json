@@ -4,7 +4,7 @@
   "description": "Chrome Extension boilerplate for manifest v3. With React.",
   "scripts": {
     "start": "parcel watch src/manifest.json --host localhost",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist .parcel-cache",
     "build": "parcel build src/manifest.json --no-cache",
     "postbuild": "node utils/remove-source-maps.mjs && node utils/create-zip.mjs",
     "release": "dotenv release-it --"
