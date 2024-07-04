@@ -6,6 +6,7 @@ module.exports = {
         'tagName': 'v${version}',
         'requireCommits': true,
     },
+    // docs https://github.com/release-it/release-it/blob/main/docs/github-releases.md
     'github': {
         'release': true,
         'releaseName': 'v${version}',
