@@ -8,7 +8,7 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
 ## How to use
 
-1. Click [<kbd>Use this template</kbd>](https://github.com/onikienko/mv3-parcel-webext-template/generate) button.
+Click [<kbd>Use this template</kbd>](https://github.com/onikienko/mv3-parcel-webext-template/generate) button.
 
 - After project initialization, change the `name` field in the `package.json` file. This field will be used as a name
   for `.zip` with release. Not the `name` field from the `manifest.json`.
