@@ -126,6 +126,8 @@ Something like that:
 
 In that case `panel` folder will be created in `dist` and you can reference it from your code like `panel/panel.html`.
 
+You can take a look at an [example](https://github.com/onikienko/keygenjukebox-play-button/tree/master/mv3). 
+
 ### How to get rid of React
 
 If you do not need to use React in your extension:
