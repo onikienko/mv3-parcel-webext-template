@@ -126,7 +126,7 @@ Something like that:
 
 In that case `panel` folder will be created in `dist` and you can reference it from your code like `panel/panel.html`.
 
-You can take a look at an [example](https://github.com/onikienko/keygenjukebox-play-button/tree/master/mv3). It adds an entry point to `offscreen.html` not listed in `manifest.json` (`chrome.offscreen` API usage).
+You can take a look at this [example](https://github.com/onikienko/keygenjukebox-play-button/tree/master/mv3). There is an additional entry point to `offscreen.html` that is not listed in `manifest.json` (`chrome.offscreen` API usage).
 
 ### How to get rid of React
 
