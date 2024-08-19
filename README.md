@@ -8,14 +8,11 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 
 ## How to use
 
-Click [<kbd>Use this template</kbd>](https://github.com/onikienko/mv3-parcel-webext-template/generate) button.
-
+- Click [<kbd>Use this template</kbd>](https://github.com/onikienko/mv3-parcel-webext-template/generate) button on the top of the page.
 - After project initialization, change the `name` field in the `package.json` file. This field will be used as a name
-  for `.zip` with release. Not the `name` field from the `manifest.json`.
-  Update `repository`, `author`, `bugs`, `license`, `homepage` props according to your needs.
-- Version number for release is used as per `package.json`. `Manifest.json` will be updated with the same
-value during release. So there is no need to update the version inside `manifes.json` manually if you will use `release` script.
-- there is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).
+  for `.zip` with production build.
+- Update `repository`, `author`, `bugs`, `license`, and `homepage` props in `package.json` according to your needs.
+- There is configured [Dependabot version updates](https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/about-dependabot-version-updates).
   If you do not want PRs with your dependency version updates, remove the `.github/dependabot.yml` file.
 
 ### Development:
@@ -45,12 +42,15 @@ This code is ready to be published in the Chrome Web Store.
 
 ### Release:
 
-The template uses [release-it](https://github.com/release-it/release-it) for release on GitHub.
+During the `release` script execution you will be asked for a new version number, so there is no need to change the version manually.
+The script will bump the version in `package.json` and `manifest.json`.
+
+This template uses [release-it](https://github.com/release-it/release-it) for release on GitHub.
 
 1. Generate `personal access token` in GitHub. Go to
    [Github->Settings->DeveloperSettings->PersonalAccessTokens](https://github.com/settings/tokens/new?scopes=repo&description=release-it).
    Only `repo` scope is required.
-2. Rename the already existing `.env.example` file to `.env` and put the generated `personal access token` there. It will look
+2. Rename the existing `.env.example` file to `.env` and put the generated `personal access token` there. It will look
    like:
     ```
     GITHUB_TOKEN="your generated token"
@@ -62,7 +62,7 @@ The template uses [release-it](https://github.com/release-it/release-it) for rel
 
 Parcel Web Extension Config [does not support](https://github.com/parcel-bundler/parcel/issues/5758) `scripting` API
 (`executeScript`, `insertCSS`, etc.)
-For a workaround, take a look at the recipe below.
+As a workaround, take a look at the recipe below.
 
 ## Recipes
 
