@@ -24,7 +24,7 @@
     "@release-it/bumper": "^6.0.1",
     "@release-it/conventional-changelog": "^8.0.1",
     "@types/chrome": "^0.0.270",
-    "@types/react": "^18.3.4",
+    "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "dotenv-cli": "^7.4.2",
     "eslint": "^8.57.0",
