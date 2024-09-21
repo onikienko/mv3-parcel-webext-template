@@ -74,11 +74,10 @@ as an additional entry point.
 For such code
 
 ```javaScript
-chrome.scripting
-    .executeScript({
-        target: {tabId},
-        files: ["checker/index.js"],
-    })
+chrome.scripting.executeScript({
+    target: {tabId},
+    files: ["checker/index.js"],
+})
 ```
 
 you could update your scripts in `manifest.json` like this:
@@ -89,7 +88,7 @@ you could update your scripts in `manifest.json` like this:
 ```
 
 If you need to use assets in such a dynamically injected script,
-you need to put them in `web_accessible_resources` in your `manifest.json`:
+put them in `web_accessible_resources` in your `manifest.json`:
 
 ```
   "web_accessible_resources": [
@@ -114,7 +113,7 @@ Do not use `import icon from "./web-accessible/icon.png"` in such scripts.
 
 ### If you need to have a page not listed in `manifest.json`
 
-The same goes if you need a page not listed in `manifest.json`.
+The same goes for a page(s) not listed in `manifest.json`.
 You can add it as an additional entry point(s).
 
 Something like that:
