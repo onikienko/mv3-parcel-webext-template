@@ -29,9 +29,8 @@ and [release-it](https://github.com/release-it/release-it) for GitHub releases.
 ### Production build:
 
 1. Stop the development script (if it is running)
-2. Remove installed dev. extension at `chrome://extensions/`
-3. Run `npm run build`
-4. Load your extension on Chrome following:
+2. Run `npm run build`
+3. Load your extension on Chrome following:
     1. Access `chrome://extensions/`
     2. Check `Developer mode`
     3. Click on `Load unpacked extension`
