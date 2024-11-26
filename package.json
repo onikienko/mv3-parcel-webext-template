@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/onikienko/mv3-parcel-webext-template#readme",
   "devDependencies": {
-    "@parcel/config-webextension": "^2.13.0",
+    "@parcel/config-webextension": "^2.13.2",
     "@release-it/bumper": "^6.0.1",
     "@release-it/conventional-changelog": "^9.0.3",
     "@types/chrome": "^0.0.283",
