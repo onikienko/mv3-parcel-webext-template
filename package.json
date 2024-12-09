@@ -24,7 +24,7 @@
     "@release-it/bumper": "^6.0.1",
     "@release-it/conventional-changelog": "^9.0.3",
     "@types/chrome": "^0.0.287",
-    "@types/react": "^18.3.12",
+    "@types/react": "^19.0.1",
     "@types/react-dom": "^18.3.1",
     "dotenv-cli": "^7.4.4",
     "eslint": "^8.57.0",
@@ -41,7 +41,7 @@
     "zip-lib": "^1.0.5"
   },
   "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
