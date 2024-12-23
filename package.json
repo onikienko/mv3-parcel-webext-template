@@ -35,7 +35,7 @@
     "opener": "^1.5.2",
     "parcel": "^2.13.3",
     "process": "^0.11.10",
-    "release-it": "^17.10.0",
+    "release-it": "^17.11.0",
     "rimraf": "^6.0.1",
     "sharp": "^0.33.5",
     "zip-lib": "^1.0.5"
