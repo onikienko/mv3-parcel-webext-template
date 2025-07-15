@@ -23,7 +23,7 @@
     "@parcel/config-webextension": "^2.13.3",
     "@release-it/bumper": "^7.0.5",
     "@release-it/conventional-changelog": "^10.0.1",
-    "@types/chrome": "^0.0.329",
+    "@types/chrome": "^0.1.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "dotenv-cli": "^8.0.0",
