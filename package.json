@@ -26,7 +26,7 @@
     "@types/chrome": "^0.1.1",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
-    "dotenv-cli": "^8.0.0",
+    "dotenv-cli": "^9.0.0",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
