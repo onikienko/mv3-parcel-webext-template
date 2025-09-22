@@ -30,7 +30,7 @@
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "filenamify": "^6.0.0",
+    "filenamify": "^7.0.0",
     "glob": "^11.0.3",
     "opener": "^1.5.2",
     "parcel": "^2.13.3",
