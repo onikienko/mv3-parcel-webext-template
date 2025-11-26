@@ -29,7 +29,7 @@
     "dotenv-cli": "^11.0.0",
     "eslint": "^8.57.1",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
     "filenamify": "^7.0.0",
     "glob": "^13.0.0",
     "opener": "^1.5.2",
