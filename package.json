@@ -22,7 +22,7 @@
   "devDependencies": {
     "@parcel/config-webextension": "2.13.3",
     "@release-it/bumper": "^7.0.5",
-    "@release-it/conventional-changelog": "^10.0.4",
+    "@release-it/conventional-changelog": "^10.0.5",
     "@types/chrome": "^0.1.36",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
