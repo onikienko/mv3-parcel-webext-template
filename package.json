@@ -33,7 +33,7 @@
     "filenamify": "^7.0.1",
     "glob": "^13.0.1",
     "opener": "^1.5.2",
-    "parcel": "2.13.3",
+    "parcel": "2.16.4",
     "process": "^0.11.10",
     "release-it": "^19.2.4",
     "rimraf": "^6.1.2",
